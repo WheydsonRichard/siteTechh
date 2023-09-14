@@ -1,0 +1,1444 @@
+body {
+    background-color: rgba(3, 1, 4, 255);
+    overflow-x: hidden
+}
+
+.box {
+    background-image: url(../imagens/pexels-daniel-putzer-633409\ \(1\).jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover
+}
+
+.logo {
+    margin-left: 70px;
+    align-items: center
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    animation: fade 3s infinite;
+    margin-top: 0
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .5
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+header {
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    font-family: arial;
+    animation: fade-in 3s ease-in-out
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+nav ul {
+    list-style: none;
+    margin-top: -75px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: playfair display
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 28px;
+    border: 2px solid transparent;
+    padding: 5px;
+    transition: border-color .3s ease;
+    box-shadow: #7ba3ce 0 20px 30px -10px
+}
+
+nav ul li a:hover {
+    animation: borderGlow 2s linear infinite
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px 5px rgba(108, 137, 168, 0.8)
+    }
+
+    50% {
+        box-shadow: 0 0 20px 10px rgba(38, 57, 77, 0.3)
+    }
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10%;
+    margin-top: -58px
+}
+
+.sm-icon {
+    padding: 0 .5rem;
+    margin: 0;
+    transition: transform .2s
+}
+
+.sm-icon:hover {
+    transform: scale(1.2)
+}
+
+.Bem-vindo {
+    font-family: Arial;
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 3rem;
+    margin-top: -.5rem;
+    color: #fff;
+    font-size: 20px;
+    float: left;
+    text-align: left
+}
+
+.bm {
+    width: 50%
+}
+
+.texto-com-sombra {
+    text-shadow: 2px 2px 4px #000;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    font-family: arial
+}
+
+.videotime {
+    float: right;
+    width: 50%;
+    margin-right: 10%;
+    margin-top: -120PX;
+    -webkit-box-reflect: below .5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4))
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+h2 {
+    font-family: arial;
+    font-size: 50px;
+    margin: 0;
+    color: #fff;
+    align-items: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0
+}
+
+.video_timetech {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    text-shadow: 4px 4px 4px #fff
+}
+
+#videotimetech {
+    width: 40%;
+    height: 100%;
+    min-width: 40%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 5px solid #eef1f3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fbf9f9
+}
+
+#solutions {
+    display: flex;
+    padding: 0;
+    text-align: left;
+    justify-content: space-between;
+    justify-items: left;
+    margin-top: 200px;
+    left: 60px;
+    margin-left: 50px;
+    animation: fade-in 3s ease-in-out
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.solucao {
+    font-size: 35px;
+    text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background-color: transparent;
+    font-family: arial
+}
+
+.moeda {
+    justify-items: center;
+    width: 50%;
+    margin-right: 50px
+}
+
+#siterespossiv {
+    display: flex;
+    padding: 0;
+    text-align: left;
+    justify-content: space-between;
+    justify-items: right;
+    margin-top: -100px;
+    left: 60px;
+    margin-right: 40px;
+    animation: fade-in 3s ease-in-out
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+#siterespossiv p {
+    flex: 1;
+    margin-top: -250px
+}
+
+.site {
+    font-size: 35px;
+    text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    background-color: transparent;
+    font-family: arial;
+    margin-top: -100px
+}
+
+.telas img {
+    width: 400px;
+    float: right;
+    margin-right: 0;
+    margin-top: -50px;
+    animation: fade-in 3s ease-in-out
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.destaque1 {
+    color: #03FFFF;
+    font-weight: 700
+}
+
+.destaque {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #03FFFF;
+    font-weight: 700;
+    font-size: 50PX
+}
+
+section {
+    padding: 400px 0;
+    text-align: center;
+    color: #fff
+}
+
+#servico {
+    margin-top: -350px
+}
+
+.servicos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    text-align: left
+}
+
+.caixa {
+    width: 200px;
+    height: 200px;
+    background-color: #040404;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fbf9f9
+}
+
+h3 {
+    font-family: arial #000;
+    color: #fbf9f9;
+    text-align: center;
+    margin-top: -51%;
+    font-size: 28px;
+    border: 2px solid transparent;
+    padding: 5px;
+    transition: border-color .3s ease;
+    box-shadow: #f1f3f5 10px 10px 10px 0;
+    border-radius: 50px
+}
+
+.caixa h3 {
+    margin-top: -60%
+}
+
+.caixa1 {
+    margin-left: 2%;
+    font-size: 20px;
+    font-family: arial
+}
+
+.pcanimado {
+    transition: transform .3s
+}
+
+.pcanimado:hover {
+    transform: scale(1.2)
+}
+
+.lojavirtual {
+    margin-top: -10%;
+    transition: transform .3s
+}
+
+.lojavirtual:hover {
+    transform: scale(1.2)
+}
+
+.app {
+    margin-left: -30%;
+    margin-top: 50px;
+    transition: transform .3s
+}
+
+.app:hover {
+    transform: scale(1.2)
+}
+
+h4 {
+    font-family: arial;
+    color: #fbf9f9;
+    text-align: center;
+    margin-top: -15%;
+    font-size: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.989);
+    width: 300px;
+    margin-left: 40%
+}
+
+.contato {
+    font-family: arial;
+    margin-top: -20%;
+    font-size: 30px;
+    color: #fff
+}
+
+.fig {
+    max-width: 100px;
+    height: auto;
+    margin-top: 0;
+    transition: transform .2s
+}
+
+.fig:hover {
+    transform: scale(1.2)
+}
+
+.whathsapp_button {
+    font-family: ARIAL;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #faf1f1;
+    padding: 10px 20px;
+    border: none solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse-shadow .5s infinite, blink 1s infinite
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1
+    }
+
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse-shadow {
+    0% {
+        box-shadow: 0 0 10px rgba(3, 255, 255, 0.5)
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(3, 255, 255, 0.7)
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(3, 255, 255, 0.866)
+    }
+}
+
+footer {
+    background-color: rgba(44, 41, 41, 0.432);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: 20px
+}
+
+.rodap {
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+@media screen and (max-width: 920px) {
+    .logo {
+        margin-left: 10px;
+        text-align: left
+    }
+
+    .logo img {
+        max-width: 200px
+    }
+
+    header {
+        text-align: center
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: -10px;
+        margin-left: 70px
+    }
+
+    nav ul li {
+        margin: 20px 10px
+    }
+
+    nav ul li a {
+        font-size: 40px;
+        padding: 10px
+    }
+
+    .icon {
+        flex-direction: row;
+        margin-right: 50px;
+        margin-top: -225px
+    }
+
+    .icon img {
+        width: 40px
+    }
+
+    .sm-icon {
+        padding: 15px .25rem;
+        text-align: right
+    }
+
+    .Bem-vindo {
+        width: 100%;
+        text-align: left;
+        font-size: 35px;
+        margin-top: 180px;
+        flex-direction: row
+    }
+
+    h1 {
+        font-size: 35px
+    }
+
+    .destaque {
+        font-size: 35px
+    }
+
+    .texto-com-sombra {
+        font-size: 30px
+    }
+
+    .videotime {
+        width: 100%;
+        max-width: 300px;
+        float: none;
+        text-align: right;
+        margin-top: 60px;
+        margin-left: 255px
+    }
+
+    h2 {
+        font-size: 35px
+    }
+
+    #solutions {
+        flex-direction: column;
+        text-align: right;
+        margin-top: 150px
+    }
+
+    .solucao {
+        font-size: 35px
+    }
+
+    .moeda img {
+        width: 100%;
+        margin-top: -18px;
+        margin-left: -50px;
+        max-width: 200px;
+        display: flex
+    }
+
+    #siterespossiv {
+        flex-direction: column;
+        text-align: center
+    }
+
+    #siterespossiv p {
+        flex: none;
+        margin: -60px 0
+    }
+
+    .site {
+        font-size: 35px;
+        margin-top: -130px;
+        text-align: left
+    }
+
+    .telas img {
+        width: 100%;
+        margin-top: 120px;
+        margin-right: -60px;
+        max-width: 350px
+    }
+
+    .destaque1 {
+        font-size: 35px
+    }
+
+    section {
+        padding: 150px 0
+    }
+
+    #servico {
+        margin-top: -100px
+    }
+
+    .servicos {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px
+    }
+
+    .caixa {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 80px auto
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-top: -80px
+    }
+
+    .caixa1 {
+        margin-top: 50px;
+        font-size: 35px
+    }
+
+    .caixa h3 {
+        margin-top: -105px;
+        font-size: 35px
+    }
+
+    .pcanimado,
+    .lojavirtual {
+        margin: 100px;
+        margin-top: 20px
+    }
+
+    .app {
+        margin: 100px
+    }
+
+    h4 {
+        font-size: 25px;
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .contato {
+        font-size: 20px;
+        margin-top: -10px
+    }
+
+    .fig {
+        max-width: 50px;
+        height: auto;
+        margin-top: 0
+    }
+
+    .whathsapp_button {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    footer {
+        margin-top: 10px
+    }
+
+    .rodap {
+        font-size: 8px
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        margin-left: 10px;
+        text-align: left
+    }
+
+    .logo img {
+        max-width: 180px
+    }
+
+    header {
+        text-align: center
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: -10px;
+        margin-left: 70px
+    }
+
+    nav ul li {
+        margin: 20px 10px
+    }
+
+    nav ul li a {
+        font-size: 25px;
+        padding: 10px
+    }
+
+    .icon {
+        flex-direction: row;
+        margin-right: 10px;
+        margin-top: -225px
+    }
+
+    .sm-icon {
+        padding: 5px .25rem;
+        text-align: right
+    }
+
+    .Bem-vindo {
+        width: 100%;
+        text-align: left;
+        font-size: 25px;
+        margin-top: 100px;
+        flex-direction: row
+    }
+
+    h1 {
+        font-size: 25px
+    }
+
+    .destaque {
+        font-size: 25px
+    }
+
+    .texto-com-sombra {
+        font-size: 25px
+    }
+
+    .videotime {
+        width: 100%;
+        max-width: 200px;
+        float: none;
+        text-align: right;
+        margin-top: 60px;
+        margin-left: 255px
+    }
+
+    h2 {
+        font-size: 20px
+    }
+
+    #solutions {
+        flex-direction: column;
+        text-align: right;
+        margin-top: 150px
+    }
+
+    .solucao {
+        font-size: 25px
+    }
+
+    .moeda img {
+        width: 100%;
+        margin-top: -18px;
+        margin-left: -50px;
+        max-width: 150px;
+        display: flex
+    }
+
+    #siterespossiv {
+        flex-direction: column;
+        text-align: center
+    }
+
+    #siterespossiv p {
+        flex: none;
+        margin: -60px 0
+    }
+
+    .site {
+        font-size: 25px;
+        margin-top: -130px;
+        text-align: left
+    }
+
+    .telas img {
+        width: 100%;
+        margin-top: 120px;
+        margin-right: -60px;
+        max-width: 280px
+    }
+
+    .destaque1 {
+        font-size: 25px
+    }
+
+    section {
+        padding: 150px 0
+    }
+
+    #servico {
+        margin-top: -100px
+    }
+
+    .servicos {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px
+    }
+
+    .caixa {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 80px auto
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-top: -80px
+    }
+
+    .caixa1 {
+        margin-top: 50px
+    }
+
+    .caixa h3 {
+        margin-top: -85px
+    }
+
+    .pcanimado,
+    .lojavirtual {
+        margin: 0;
+        margin-top: 20px
+    }
+
+    .app {
+        margin-right: -45px;
+        margin-top: -20px
+    }
+
+    h4 {
+        font-size: 20px;
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .contato {
+        font-size: 20px;
+        margin-top: -10px
+    }
+
+    .fig {
+        max-width: 50px;
+        height: auto;
+        margin-top: 0
+    }
+
+    .whathsapp_button {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    footer {
+        margin-top: 10px
+    }
+
+    .rodap {
+        font-size: 8px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        margin-left: 10px;
+        text-align: left
+    }
+
+    .logo img {
+        max-width: 180px
+    }
+
+    header {
+        text-align: left
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: 10px
+    }
+
+    nav ul li {
+        margin: 20px 10px
+    }
+
+    nav ul li a {
+        font-size: 25px;
+        padding: 10px
+    }
+
+    .icon {
+        flex-direction: row;
+        margin-right: 10px;
+        margin-top: -225px
+    }
+
+    .sm-icon {
+        padding: 5px .25rem;
+        text-align: right
+    }
+
+    .Bem-vindo {
+        width: 100%;
+        text-align: left;
+        font-size: 15px;
+        margin-top: 100px;
+        flex-direction: row
+    }
+
+    h1 {
+        font-size: 20px
+    }
+
+    .destaque {
+        font-size: 20px
+    }
+
+    .texto-com-sombra {
+        font-size: 20px
+    }
+
+    .videotime {
+        width: 100%;
+        max-width: 150px;
+        float: none;
+        text-align: right;
+        margin-top: 60px;
+        margin-left: 165px
+    }
+
+    h2 {
+        font-size: 20px
+    }
+
+    #solutions {
+        flex-direction: column;
+        text-align: right;
+        margin-top: 100px
+    }
+
+    .solucao {
+        font-size: 20px
+    }
+
+    .moeda img {
+        width: 100%;
+        margin-top: -18px;
+        margin-left: -50px;
+        max-width: 100px;
+        display: flex
+    }
+
+    #siterespossiv {
+        flex-direction: column;
+        text-align: center
+    }
+
+    #siterespossiv p {
+        flex: none;
+        margin: -60px 0
+    }
+
+    .site {
+        font-size: 20px;
+        margin-top: -130px;
+        text-align: left
+    }
+
+    .telas img {
+        width: 100%;
+        margin-top: 120px;
+        margin-right: -60px;
+        max-width: 250px
+    }
+
+    .destaque1 {
+        font-size: 20px
+    }
+
+    section {
+        padding: 150px 0
+    }
+
+    #servico {
+        margin-top: -100px
+    }
+
+    .servicos {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px
+    }
+
+    .caixa {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 80px auto
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-top: -80px
+    }
+
+    .caixa1 {
+        margin-top: 50px
+    }
+
+    .caixa h3 {
+        margin-top: -85px
+    }
+
+    .pcanimado,
+    .lojavirtual {
+        margin: 0;
+        margin-top: 20px
+    }
+
+    .app {
+        margin-right: -45px;
+        margin-top: -20px
+    }
+
+    h4 {
+        font-size: 20px;
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .contato {
+        font-size: 20px;
+        margin-top: -10px
+    }
+
+    .fig {
+        max-width: 50px;
+        height: auto;
+        margin-top: 0
+    }
+
+    .whathsapp_button {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    footer {
+        margin-top: 10px
+    }
+
+    .rodap {
+        font-size: 8px
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .box {
+        width: 500px;
+        height: 100vh;
+        background-position: center;
+        background-size: cover
+    }
+
+    .logo {
+        margin-left: 10px;
+        text-align: left
+    }
+
+    .logo img {
+        max-width: 200px
+    }
+
+    header {
+        text-align: left
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin-top: 5px
+    }
+
+    nav ul li {
+        margin: 15px 10px
+    }
+
+    nav ul li a {
+        font-size: 25px;
+        padding: 10px
+    }
+
+    .icon {
+        flex-direction: row;
+        margin-right: 10x;
+        margin-top: -225px
+    }
+
+    .sm-icon {
+        padding: 5px .25rem;
+        text-align: right;
+        width: 30px
+    }
+
+    .Bem-vindo {
+        width: 100%;
+        text-align: left;
+        font-size: 25px;
+        margin-top: 110px;
+        flex-direction: row
+    }
+
+    h1 {
+        font-size: 25px
+    }
+
+    .destaque {
+        font-size: 25px
+    }
+
+    .texto-com-sombra {
+        font-size: 15px
+    }
+
+    .videotime {
+        width: 100%;
+        max-width: 180px;
+        float: none;
+        text-align: right;
+        margin-top: 80px;
+        margin-left: 150px
+    }
+
+    h2 {
+        font-size: 25px
+    }
+
+    #solutions {
+        flex-direction: column;
+        text-align: right;
+        margin-top: 100px
+    }
+
+    .solucao {
+        font-size: 25px
+    }
+
+    .moeda img {
+        width: 100%;
+        margin-top: -18px;
+        margin-left: -50px;
+        max-width: 150px;
+        display: flex
+    }
+
+    #siterespossiv {
+        flex-direction: column;
+        text-align: center
+    }
+
+    #siterespossiv p {
+        flex: none;
+        margin: -60px 0
+    }
+
+    .site {
+        font-size: 25px;
+        margin-top: -150px;
+        text-align: left
+    }
+
+    .telas img {
+        width: 100%;
+        margin-top: 120px;
+        margin-right: -60px;
+        max-width: 250px
+    }
+
+    .destaque1 {
+        font-size: 25px
+    }
+
+    section {
+        padding: 150px 0
+    }
+
+    #servico {
+        margin-top: -100px
+    }
+
+    .servicos {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px
+    }
+
+    .caixa {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 80px auto
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-top: -50px
+    }
+
+    .caixa1 {
+        font-size: 25px
+    }
+
+    .caixa h3 {
+        margin-top: -75px
+    }
+
+    .pcanimado,
+    .lojavirtual {
+        margin: 0;
+        margin-top: 20px
+    }
+
+    .app {
+        margin-right: -45px;
+        margin-top: -20px
+    }
+
+    h4 {
+        font-size: 25px;
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .contato {
+        font-size: 25px;
+        margin-top: -10px
+    }
+
+    .fig {
+        max-width: 50px;
+        height: auto;
+        margin-top: 0
+    }
+
+    .whathsapp_button {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    footer {
+        margin-top: 10px
+    }
+
+    .rodap {
+        font-size: 8px
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo {
+        margin-left: 10px;
+        text-align: center
+    }
+
+    .logo img {
+        max-width: 100px
+    }
+
+    header {
+        text-align: left
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: -100px
+    }
+
+    nav ul li {
+        margin: 15px 10px
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 10px
+    }
+
+    .icon {
+        flex-direction: column;
+        margin-right: -200px;
+        margin-top: -200px
+    }
+
+    .sm-icon {
+        padding: 5px .25rem;
+        text-align: right
+    }
+
+    .Bem-vindo {
+        width: 100%;
+        text-align: left;
+        font-size: 10px;
+        margin-top: 30px;
+        flex-direction: row
+    }
+
+    h1 {
+        font-size: 15px
+    }
+
+    .destaque {
+        font-size: 15px
+    }
+
+    .texto-com-sombra {
+        font-size: 15px
+    }
+
+    .videotime {
+        width: 100%;
+        max-width: 100px;
+        float: none;
+        text-align: right;
+        margin-top: 100px;
+        margin-left: 100px
+    }
+
+    h2 {
+        font-size: 15px
+    }
+
+    #solutions {
+        flex-direction: column;
+        text-align: right;
+        margin-top: 100px
+    }
+
+    .solucao {
+        font-size: 15px
+    }
+
+    .moeda img {
+        width: 100%;
+        margin-top: -18px;
+        margin-left: -50px;
+        max-width: 100px;
+        display: flex
+    }
+
+    #siterespossiv {
+        flex-direction: column;
+        text-align: center
+    }
+
+    #siterespossiv p {
+        flex: none;
+        margin: -60px 0
+    }
+
+    .site {
+        font-size: 15px;
+        margin-top: -150px;
+        text-align: left
+    }
+
+    .telas img {
+        width: 100%;
+        margin-top: 120px;
+        margin-right: -60px;
+        max-width: 250px
+    }
+
+    .destaque1 {
+        font-size: 15px
+    }
+
+    section {
+        padding: 150px 0
+    }
+
+    #servico {
+        margin-top: -100px
+    }
+
+    .servicos {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px
+    }
+
+    .caixa {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 80px auto
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-top: -50px
+    }
+
+    .caixa h3 {
+        margin-top: -75px
+    }
+
+    .pcanimado,
+    .lojavirtual {
+        margin: 0;
+        margin-top: 20px
+    }
+
+    .app {
+        margin-right: -45px;
+        margin-top: -20px
+    }
+
+    h4 {
+        font-size: 20px;
+        width: 80%;
+        margin: 10px auto
+    }
+
+    .contato {
+        font-size: 20px;
+        margin-top: -10px
+    }
+
+    .fig {
+        max-width: 50px;
+        height: auto;
+        margin-top: 0
+    }
+
+    .whathsapp_button {
+        font-size: 15px;
+        padding: 5px 10px;
+        border-radius: 5px
+    }
+
+    footer {
+        margin-top: 10px
+    }
+
+    .rodap {
+        font-size: 8px
+    }
+}
