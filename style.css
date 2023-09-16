@@ -1,13 +1,23 @@
 body {
-    background-color: rgba(3, 1, 4, 255);
-    overflow-x: hidden
+    background: linear-gradient(180deg, rgba(7,16,18,1) 34%, rgba(0,0,0,1) 52%);
+    overflow-x: hidden;
+    
 }
 
 .box {
-    background-image: url(../imagens/pexels-daniel-putzer-633409\ \(1\).jpg);
+    position: relative;
     height: 100vh;
-    background-position: center;
-    background-size: cover
+    overflow: hidden;
+}  
+
+#background-video{
+    position: absolute; /* Posiciona o vídeo em relação ao .box */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra todo o .box */
+    z-index: -1;
 }
 
 .logo {
@@ -63,7 +73,8 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    font-family: playfair display
+    font-family: forte;
+    
 }
 
 nav ul li {
@@ -80,7 +91,7 @@ nav ul li a {
     border: 2px solid transparent;
     padding: 5px;
     transition: border-color .3s ease;
-    box-shadow: #7ba3ce 0 20px 30px -10px
+    box-shadow: #7ba3ce 0 20px 30px -10px;
 }
 
 nav ul li a:hover {
@@ -104,17 +115,17 @@ nav ul li a:hover {
     flex-direction: row;
     align-items: center;
     justify-content: right;
-    margin-right: 10%;
-    margin-top: -58px
+    margin-right: 100px;
+    margin-top: -58px;
+    transition: transform .2s;
 }
 
-.sm-icon {
-    padding: 0 .5rem;
-    margin: 0;
-    transition: transform .2s
+.icon img{
+    margin-left: 10px;
+
 }
 
-.sm-icon:hover {
+.icon img:hover {
     transform: scale(1.2)
 }
 
@@ -137,7 +148,12 @@ nav ul li a:hover {
     width: 50%
 }
 
-.texto-com-sombra {
+h1{
+    font-size: 50px;
+}
+
+
+.texto-com-sombra,.bm {
     text-shadow: 2px 2px 4px #000;
     font-size: 24px;
     color: #fff;
@@ -149,7 +165,7 @@ nav ul li a:hover {
     float: right;
     width: 50%;
     margin-right: 10%;
-    margin-top: -120PX;
+    margin-top: -250PX;
     -webkit-box-reflect: below .5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4))
 }
 
@@ -166,27 +182,10 @@ h2 {
     color: #fff;
     align-items: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px #000;
 }
 
-.video_timetech {
-    display: flex;
-    justify-content: center;
-    height: calc(100vh - 70px);
-    overflow: hidden;
-    text-shadow: 4px 4px 4px #fff
-}
-
-#videotimetech {
-    width: 40%;
-    height: 100%;
-    min-width: 40%;
-    object-fit: cover;
-    overflow: hidden;
-    border: 5px solid #eef1f3;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #fbf9f9
-}
 
 #solutions {
     display: flex;
@@ -217,13 +216,21 @@ h2 {
     text-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     background-color: transparent;
-    font-family: arial
+    font-family: arial;
+    text-shadow: 2px 2px 4px #000;
+
 }
 
-.moeda {
+.maop {
     justify-items: center;
-    width: 50%;
-    margin-right: 50px
+    margin-right: 0px
+}
+.maop img{
+    transition: trasnform 0.8s;
+}
+
+.maop img:hover{
+    transform: scaleX(1.2);
 }
 
 #siterespossiv {
@@ -232,27 +239,19 @@ h2 {
     text-align: left;
     justify-content: space-between;
     justify-items: right;
-    margin-top: -100px;
+    margin-top: -140px;
     left: 60px;
     margin-right: 40px;
-    animation: fade-in 3s ease-in-out
+    text-shadow: 2px 2px 4px #000;
+    font-family: arial
+
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px)
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0)
-    }
-}
 
 #siterespossiv p {
     flex: 1;
-    margin-top: -250px
+    font-family: arial
+
 }
 
 .site {
@@ -261,7 +260,10 @@ h2 {
     color: #fff;
     background-color: transparent;
     font-family: arial;
-    margin-top: -100px
+    text-align: right;
+    margin-top: -100px;
+    animation: fade-in 3s ease-in-out
+    
 }
 
 .telas img {
@@ -269,7 +271,11 @@ h2 {
     float: right;
     margin-right: 0;
     margin-top: -50px;
-    animation: fade-in 3s ease-in-out
+    animation: fade-in 3s ease-in-out;
+    transition: trasnform 0.8s;
+}
+.telas img:hover{
+    transform: scale(1.2);
 }
 
 @keyframes fade-in {
@@ -303,7 +309,7 @@ section {
 }
 
 #servico {
-    margin-top: -350px
+    margin-top: -250px
 }
 
 .servicos {
@@ -323,7 +329,7 @@ section {
 }
 
 h3 {
-    font-family: arial #000;
+    font-family: cooper;
     color: #fbf9f9;
     text-align: center;
     margin-top: -51%;
@@ -331,8 +337,8 @@ h3 {
     border: 2px solid transparent;
     padding: 5px;
     transition: border-color .3s ease;
-    box-shadow: #f1f3f5 10px 10px 10px 0;
-    border-radius: 50px
+    border-radius: 20px;
+    box-shadow: #7ba3ce 0 10px 10px -10px;
 }
 
 .caixa h3 {
@@ -342,7 +348,9 @@ h3 {
 .caixa1 {
     margin-left: 2%;
     font-size: 20px;
-    font-family: arial
+    font-family: arial;
+    
+    
 }
 
 .pcanimado {
@@ -380,1065 +388,400 @@ h4 {
     font-size: 28px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.989);
     width: 300px;
-    margin-left: 40%
+    margin-left: 40%;
+}
+.maos{
+    margin-top: -560px;
+}
+.maodesquerda img{
+    float: left;
+    -webkit-box-reflect: below .5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s;
+
+}
+.maodesquerda img:hover{
+    transform: scaleY(1.2);
+}
+
+.maodireita img{
+    float: right;
+    -webkit-box-reflect: below .5px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s;
+}
+.maodireita img:hover{
+    transform: scaleY(1.2);
+}
+
+.barra{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 0;
 }
 
 .contato {
     font-family: arial;
-    margin-top: -20%;
+    margin-top: 200px;
     font-size: 30px;
-    color: #fff
+    color: #fff;
+    
 }
 
 .fig {
-    max-width: 100px;
+    max-width: 200px;
     height: auto;
     margin-top: 0;
-    transition: transform .2s
+    transition: transform .2s;
 }
 
 .fig:hover {
     transform: scale(1.2)
 }
 
-.whathsapp_button {
-    font-family: ARIAL;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: #faf1f1;
-    padding: 10px 20px;
-    border: none solid transparent;
-    border-radius: 5px;
-    cursor: pointer;
-    animation: pulse-shadow .5s infinite, blink 1s infinite
-}
 
-@keyframes blink {
 
-    0%,
-    50%,
-    100% {
-        opacity: 1
-    }
-
-    25%,
-    75% {
-        opacity: 0
-    }
-}
-
-@keyframes pulse-shadow {
-    0% {
-        box-shadow: 0 0 10px rgba(3, 255, 255, 0.5)
-    }
-
-    50% {
-        box-shadow: 0 0 20px rgba(3, 255, 255, 0.7)
-    }
-
-    100% {
-        box-shadow: 0 0 10px rgba(3, 255, 255, 0.866)
-    }
-}
-
-footer {
+.rodape {
     background-color: rgba(44, 41, 41, 0.432);
     color: #fff;
     text-align: center;
     padding: 10px 0;
     width: 100%;
     z-index: 1;
-    margin-top: 20px
+
 }
 
 .rodap {
-    font-size: 10px;
+    font-size: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
-
-@media screen and (max-width: 920px) {
-    .logo {
-        margin-left: 10px;
-        text-align: left
-    }
-
-    .logo img {
-        max-width: 200px
-    }
-
-    header {
-        text-align: center
-    }
-
-    nav ul {
-        flex-direction: row;
-        margin-top: -10px;
-        margin-left: 70px
-    }
-
-    nav ul li {
-        margin: 20px 10px
-    }
-
-    nav ul li a {
-        font-size: 40px;
-        padding: 10px
-    }
-
-    .icon {
-        flex-direction: row;
-        margin-right: 50px;
-        margin-top: -225px
-    }
-
-    .icon img {
-        width: 40px
-    }
-
-    .sm-icon {
-        padding: 15px .25rem;
-        text-align: right
-    }
-
-    .Bem-vindo {
-        width: 100%;
-        text-align: left;
-        font-size: 35px;
-        margin-top: 180px;
-        flex-direction: row
-    }
-
-    h1 {
-        font-size: 35px
-    }
-
-    .destaque {
-        font-size: 35px
-    }
-
-    .texto-com-sombra {
-        font-size: 30px
-    }
-
-    .videotime {
-        width: 100%;
-        max-width: 300px;
-        float: none;
-        text-align: right;
-        margin-top: 60px;
-        margin-left: 255px
-    }
-
-    h2 {
-        font-size: 35px
-    }
-
-    #solutions {
-        flex-direction: column;
-        text-align: right;
-        margin-top: 150px
-    }
-
-    .solucao {
-        font-size: 35px
-    }
-
-    .moeda img {
-        width: 100%;
-        margin-top: -18px;
-        margin-left: -50px;
-        max-width: 200px;
-        display: flex
-    }
-
-    #siterespossiv {
-        flex-direction: column;
-        text-align: center
-    }
-
-    #siterespossiv p {
-        flex: none;
-        margin: -60px 0
-    }
-
-    .site {
-        font-size: 35px;
-        margin-top: -130px;
-        text-align: left
-    }
-
-    .telas img {
-        width: 100%;
-        margin-top: 120px;
-        margin-right: -60px;
-        max-width: 350px
-    }
-
-    .destaque1 {
-        font-size: 35px
-    }
-
-    section {
-        padding: 150px 0
-    }
-
-    #servico {
-        margin-top: -100px
-    }
-
-    .servicos {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 50px
-    }
-
-    .caixa {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 80px auto
-    }
-
-    h3 {
-        font-size: 35px;
-        margin-top: -80px
-    }
-
-    .caixa1 {
-        margin-top: 50px;
-        font-size: 35px
-    }
-
-    .caixa h3 {
-        margin-top: -105px;
-        font-size: 35px
-    }
-
-    .pcanimado,
-    .lojavirtual {
-        margin: 100px;
-        margin-top: 20px
-    }
-
-    .app {
-        margin: 100px
-    }
-
-    h4 {
-        font-size: 25px;
-        width: 80%;
-        margin: 10px auto
-    }
-
-    .contato {
-        font-size: 20px;
-        margin-top: -10px
-    }
-
-    .fig {
-        max-width: 50px;
-        height: auto;
-        margin-top: 0
-    }
-
-    .whathsapp_button {
-        font-size: 15px;
-        padding: 5px 10px;
-        border-radius: 5px
-    }
-
-    footer {
-        margin-top: 10px
-    }
-
-    .rodap {
-        font-size: 8px
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .logo {
-        margin-left: 10px;
-        text-align: left
-    }
-
-    .logo img {
-        max-width: 180px
-    }
-
-    header {
-        text-align: center
-    }
-
-    nav ul {
-        flex-direction: row;
-        margin-top: -10px;
-        margin-left: 70px
-    }
-
-    nav ul li {
-        margin: 20px 10px
-    }
-
-    nav ul li a {
-        font-size: 25px;
-        padding: 10px
-    }
-
-    .icon {
-        flex-direction: row;
-        margin-right: 10px;
-        margin-top: -225px
-    }
-
-    .sm-icon {
-        padding: 5px .25rem;
-        text-align: right
-    }
-
-    .Bem-vindo {
-        width: 100%;
-        text-align: left;
-        font-size: 25px;
-        margin-top: 100px;
-        flex-direction: row
-    }
-
-    h1 {
-        font-size: 25px
-    }
-
-    .destaque {
-        font-size: 25px
-    }
-
-    .texto-com-sombra {
-        font-size: 25px
-    }
-
-    .videotime {
-        width: 100%;
-        max-width: 200px;
-        float: none;
-        text-align: right;
-        margin-top: 60px;
-        margin-left: 255px
-    }
-
-    h2 {
-        font-size: 20px
-    }
-
-    #solutions {
-        flex-direction: column;
-        text-align: right;
-        margin-top: 150px
-    }
-
-    .solucao {
-        font-size: 25px
-    }
-
-    .moeda img {
-        width: 100%;
-        margin-top: -18px;
-        margin-left: -50px;
-        max-width: 150px;
-        display: flex
-    }
-
-    #siterespossiv {
-        flex-direction: column;
-        text-align: center
-    }
-
-    #siterespossiv p {
-        flex: none;
-        margin: -60px 0
-    }
-
-    .site {
-        font-size: 25px;
-        margin-top: -130px;
-        text-align: left
-    }
-
-    .telas img {
-        width: 100%;
-        margin-top: 120px;
-        margin-right: -60px;
-        max-width: 280px
-    }
-
-    .destaque1 {
-        font-size: 25px
-    }
-
-    section {
-        padding: 150px 0
-    }
-
-    #servico {
-        margin-top: -100px
-    }
-
-    .servicos {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 50px
-    }
-
-    .caixa {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 80px auto
-    }
-
-    h3 {
-        font-size: 25px;
-        margin-top: -80px
-    }
-
-    .caixa1 {
-        margin-top: 50px
-    }
-
-    .caixa h3 {
-        margin-top: -85px
-    }
-
-    .pcanimado,
-    .lojavirtual {
-        margin: 0;
-        margin-top: 20px
-    }
-
-    .app {
-        margin-right: -45px;
-        margin-top: -20px
-    }
-
-    h4 {
-        font-size: 20px;
-        width: 80%;
-        margin: 10px auto
-    }
-
-    .contato {
-        font-size: 20px;
-        margin-top: -10px
-    }
-
-    .fig {
-        max-width: 50px;
-        height: auto;
-        margin-top: 0
-    }
-
-    .whathsapp_button {
-        font-size: 15px;
-        padding: 5px 10px;
-        border-radius: 5px
-    }
-
-    footer {
-        margin-top: 10px
-    }
-
-    .rodap {
-        font-size: 8px
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .logo {
-        margin-left: 10px;
-        text-align: left
-    }
-
-    .logo img {
-        max-width: 180px
-    }
-
-    header {
-        text-align: left
-    }
-
-    nav ul {
-        flex-direction: row;
-        margin-top: 10px
-    }
-
-    nav ul li {
-        margin: 20px 10px
-    }
-
-    nav ul li a {
-        font-size: 25px;
-        padding: 10px
-    }
-
-    .icon {
-        flex-direction: row;
-        margin-right: 10px;
-        margin-top: -225px
-    }
-
-    .sm-icon {
-        padding: 5px .25rem;
-        text-align: right
-    }
-
-    .Bem-vindo {
-        width: 100%;
-        text-align: left;
-        font-size: 15px;
-        margin-top: 100px;
-        flex-direction: row
-    }
-
-    h1 {
-        font-size: 20px
-    }
-
-    .destaque {
-        font-size: 20px
-    }
-
-    .texto-com-sombra {
-        font-size: 20px
-    }
-
-    .videotime {
-        width: 100%;
-        max-width: 150px;
-        float: none;
-        text-align: right;
-        margin-top: 60px;
-        margin-left: 165px
-    }
-
-    h2 {
-        font-size: 20px
-    }
-
-    #solutions {
-        flex-direction: column;
-        text-align: right;
-        margin-top: 100px
-    }
-
-    .solucao {
-        font-size: 20px
-    }
-
-    .moeda img {
-        width: 100%;
-        margin-top: -18px;
-        margin-left: -50px;
-        max-width: 100px;
-        display: flex
-    }
-
-    #siterespossiv {
-        flex-direction: column;
-        text-align: center
-    }
-
-    #siterespossiv p {
-        flex: none;
-        margin: -60px 0
-    }
-
-    .site {
-        font-size: 20px;
-        margin-top: -130px;
-        text-align: left
-    }
-
-    .telas img {
-        width: 100%;
-        margin-top: 120px;
-        margin-right: -60px;
-        max-width: 250px
-    }
-
-    .destaque1 {
-        font-size: 20px
-    }
-
-    section {
-        padding: 150px 0
-    }
-
-    #servico {
-        margin-top: -100px
-    }
-
-    .servicos {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 50px
-    }
-
-    .caixa {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 80px auto
-    }
-
-    h3 {
-        font-size: 20px;
-        margin-top: -80px
-    }
-
-    .caixa1 {
-        margin-top: 50px
-    }
-
-    .caixa h3 {
-        margin-top: -85px
-    }
-
-    .pcanimado,
-    .lojavirtual {
-        margin: 0;
-        margin-top: 20px
-    }
-
-    .app {
-        margin-right: -45px;
-        margin-top: -20px
-    }
-
-    h4 {
-        font-size: 20px;
-        width: 80%;
-        margin: 10px auto
-    }
-
-    .contato {
-        font-size: 20px;
-        margin-top: -10px
-    }
-
-    .fig {
-        max-width: 50px;
-        height: auto;
-        margin-top: 0
-    }
-
-    .whathsapp_button {
-        font-size: 15px;
-        padding: 5px 10px;
-        border-radius: 5px
-    }
-
-    footer {
-        margin-top: 10px
-    }
-
-    .rodap {
-        font-size: 8px
-    }
-}
-
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .box {
-        width: 500px;
-        height: 100vh;
-        background-position: center;
-        background-size: cover
-    }
-
-    .logo {
-        margin-left: 10px;
-        text-align: left
+        height: 80vh; /* Ajuste a altura conforme necessário */
+        overflow: hidden;
     }
 
     .logo img {
-        max-width: 200px
-    }
-
-    header {
-        text-align: left
-    }
-
-    nav ul {
-        flex-direction: row;
-        margin-top: 5px
-    }
-
-    nav ul li {
-        margin: 15px 10px
-    }
-
-    nav ul li a {
-        font-size: 25px;
-        padding: 10px
-    }
-
-    .icon {
-        flex-direction: row;
-        margin-right: 10x;
-        margin-top: -225px
-    }
-
-    .sm-icon {
-        padding: 5px .25rem;
-        text-align: right;
-        width: 30px
-    }
-
-    .Bem-vindo {
-        width: 100%;
-        text-align: left;
-        font-size: 25px;
-        margin-top: 110px;
-        flex-direction: row
-    }
-
-    h1 {
-        font-size: 25px
-    }
-
-    .destaque {
-        font-size: 25px
-    }
-
-    .texto-com-sombra {
-        font-size: 15px
-    }
-
-    .videotime {
-        width: 100%;
-        max-width: 180px;
-        float: none;
-        text-align: right;
-        margin-top: 80px;
-        margin-left: 150px
-    }
-
-    h2 {
-        font-size: 25px
-    }
-
-    #solutions {
-        flex-direction: column;
-        text-align: right;
-        margin-top: 100px
-    }
-
-    .solucao {
-        font-size: 25px
-    }
-
-    .moeda img {
-        width: 100%;
-        margin-top: -18px;
         margin-left: -50px;
-        max-width: 150px;
-        display: flex
+        max-width: 130px;
+         /* Ajuste a margem conforme necessário */
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        margin-top: -50px;
+         
     }
 
-    #siterespossiv {
-        flex-direction: column;
-        text-align: center
+    nav ul li a{
+        font-size: 20px;
     }
 
-    #siterespossiv p {
-        flex: none;
-        margin: -60px 0
+    .icon{
+    
+        flex-direction: row;
+        float: center;
+        justify-items: right;
+        /* margin-top: -100px; */
+        margin-right: 15px;
     }
-
-    .site {
-        font-size: 25px;
+    .icon img {
+        display: flex;
+        width: 25px;        
+    }
+    .Bem-vindo{
+        display: flex;
+        text-align: left;
+        justify-content: center;
+        margin-left: -200px;
         margin-top: -150px;
-        text-align: left
-    }
-
-    .telas img {
-        width: 100%;
-        margin-top: 120px;
-        margin-right: -60px;
-        max-width: 250px
-    }
-
-    .destaque1 {
-        font-size: 25px
-    }
-
-    section {
-        padding: 150px 0
-    }
-
-    #servico {
-        margin-top: -100px
-    }
-
-    .servicos {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 50px
-    }
-
-    .caixa {
-        width: 100%;
-        height: auto;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 80px auto
-    }
-
-    h3 {
-        font-size: 25px;
-        margin-top: -50px
-    }
-
-    .caixa1 {
-        font-size: 25px
-    }
-
-    .caixa h3 {
-        margin-top: -75px
-    }
-
-    .pcanimado,
-    .lojavirtual {
-        margin: 0;
-        margin-top: 20px
-    }
-
-    .app {
-        margin-right: -45px;
-        margin-top: -20px
-    }
-
-    h4 {
-        font-size: 25px;
         width: 80%;
-        margin: 10px auto
+    }
+    h1{
+        font-size: 18px;
+    }
+    .destaque{
+        font-size: 21px;
+    }
+    .texto-com-sombra{
+        font-size: 18px;
+    }
+    .videotime{
+        margin-top: -150px;
+    
+    }
+    #solution{
+        width: 80%;
+        text-align: left;
+        justify-content: left;
+        margin-top: -80px;
+
+    }
+    .solucao{
+        font-size: 18px;
+    }
+    .maop{
+       float: right;
+    }
+    .maop img{
+        display: flex;
+        justify-items: right;
+        width: 320px;
+        margin-right: -150px;
+        
     }
 
-    .contato {
-        font-size: 25px;
-        margin-top: -10px
+    .site{
+        font-size: 18px;
+        margin-top: -180px;
+        text-align: right;
+    }
+    .telas img{
+        display: flex;
+        justify-items: left;
+        width: 320px;
+        margin-top: 40px;
     }
 
-    .fig {
-        max-width: 50px;
-        height: auto;
-        margin-top: 0
+    .servicos{
+        display: flex;
+        justify-items: center;
+        margin-top: -20px;
+        
+    }
+    .caixa{
+        width: 100px;
+        
+    }
+    h3{
+        font-size: 18px;
+        
     }
 
-    .whathsapp_button {
-        font-size: 15px;
-        padding: 5px 10px;
-        border-radius: 5px
+    .caixa h3{
+        margin-top: -115px;
+    }
+    .caixa1{
+        display: flex;
+        font-size: 18px; 
+        margin-top: 50px;
+        margin-left: -15px;
+    }
+    .pcanimado img, .lojavirtual img {
+        width: 150px;
+        margin-left: -20px;
+    }
+    .pcanimado img{
+        margin-top: -10px;
+    }
+    .lojavirtual{
+        margin-top: 30px;
+    }
+    .app img{
+        width: 200px;
+        margin-left: -20px;
+        margin-top: 30px;
+    }
+    .maos{
+        display: flex;
+        margin-top: -150px;
+        
+    }
+    .maodireita img{
+        display: flex;
+        justify-items: right;
+        margin-left: -250px;
+        
     }
 
-    footer {
-        margin-top: 10px
+    .contato{
+        margin-top: -120px;
+        text-align: center;
+        justify-items: center;
     }
+    .contato h4{
+        text-align: center;
+        margin-left: 230px;
+    }
+    
 
-    .rodap {
-        font-size: 8px
-    }
+    /* Adicione mais estilos para telas maiores aqui */
 }
 
-@media screen and (max-width: 320px) {
-    .logo {
-        margin-left: 10px;
-        text-align: center
+@media screen and (min-width: 414px) and (max-width: 767px) {
+    .box {
+        height: 100vh; /* Ajuste a altura conforme necessário */
+        overflow: hidden;
+        width: 220%;
     }
 
     .logo img {
-        max-width: 100px
+        margin-left: -80px;
+        max-width: 130px;
+         /* Ajuste a margem conforme necessário */
+    }
+    nav ul{
+        display: flex;
+        flex-direction: roe;
+        margin-top: -50px;
+         
     }
 
-    header {
-        text-align: left
+    nav ul li a{
+        font-size: 30px;
     }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: -100px
+    .icon{
+    
+        flex-direction: row;
+        float: center;
+        justify-items: right;
+        margin-top: -130px;
+        margin-right: 100px;
     }
-
-    nav ul li {
-        margin: 15px 10px
+    .icon img {
+        display: flex;
+        width: 25px;        
     }
-
-    nav ul li a {
-        font-size: 15px;
-        padding: 10px
-    }
-
-    .icon {
-        flex-direction: column;
-        margin-right: -200px;
-        margin-top: -200px
-    }
-
-    .sm-icon {
-        padding: 5px .25rem;
-        text-align: right
-    }
-
-    .Bem-vindo {
-        width: 100%;
+    .Bem-vindo{
+        display: flex;
         text-align: left;
-        font-size: 10px;
-        margin-top: 30px;
-        flex-direction: row
+        justify-content: center;
+        margin-left: -200px;
+        margin-top: -100px;
+        width: 90%;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .destaque{
+        font-size: 23px;
+    }
+    .texto-com-sombra{
+        font-size: 20px;
+    }
+    .videotime{
+        margin-top: -250px;
+        margin-right: -200px;
+        width: 250px;
+    
+    }
+    #solution{
+        width: 80%;
+        text-align: left;
+        justify-content: left;
+        margin-top: -80px;
+        
+
+    }
+    .solucao{
+        font-size: 23px;
+    }
+    .maop{
+       float: right;
+
+    }
+    .maop img{
+        display: flex;
+        justify-items: right;
+        width: 420px;
+        margin-right: -1000px;
+        margin-left: 120px;
+        
     }
 
-    h1 {
-        font-size: 15px
-    }
-
-    .destaque {
-        font-size: 15px
-    }
-
-    .texto-com-sombra {
-        font-size: 15px
-    }
-
-    .videotime {
-        width: 100%;
-        max-width: 100px;
-        float: none;
+    .site{
+        font-size: 24px;
+        margin-top: -180px;
         text-align: right;
-        margin-top: 100px;
-        margin-left: 100px
+        margin-right: -400px;
+    }
+    .telas img{
+        display: flex;
+        justify-items: left;
+        width: 380px;
+        margin-top: 80px;
     }
 
-    h2 {
-        font-size: 15px
+    .servicos{
+        display: flex;
+        justify-items: center;
+        margin-top: -20px;
+        
+    }
+    .caixa{
+        width: 130px;
+        
+    }
+    h3{
+        font-size: 23px;
+        
     }
 
-    #solutions {
-        flex-direction: column;
-        text-align: right;
-        margin-top: 100px
+    .caixa h3{
+        margin-top: -115px;
+    }
+    .caixa1{
+        display: flex;
+        font-size: 21px; 
+        margin-top: 50px;
+        margin-left: -15px;
+    }
+    .pcanimado img, .lojavirtual img {
+        width: 150px;
+        margin-left: -20px;
+    }
+    .pcanimado img{
+        margin-top: -10px;
+        margin-left: -3px;
+    }
+    .lojavirtual{
+        margin-top: -5px;
+        margin-left: 8px;
+
+    }
+    .app img{
+        width: 225px;
+        margin-left: -20px;
+        margin-top: 10px;
+    }
+    .maos{
+        display: flex;
+        margin-top: -280px;
+        
+    }
+    .maodireita img{
+        display: flex;
+        justify-items: right;
+        margin-left: -150px;
+        
     }
 
-    .solucao {
-        font-size: 15px
-    }
-
-    .moeda img {
-        width: 100%;
-        margin-top: -18px;
-        margin-left: -50px;
-        max-width: 100px;
-        display: flex
-    }
-
-    #siterespossiv {
-        flex-direction: column;
-        text-align: center
-    }
-
-    #siterespossiv p {
-        flex: none;
-        margin: -60px 0
-    }
-
-    .site {
-        font-size: 15px;
-        margin-top: -150px;
-        text-align: left
-    }
-
-    .telas img {
-        width: 100%;
-        margin-top: 120px;
-        margin-right: -60px;
-        max-width: 250px
-    }
-
-    .destaque1 {
-        font-size: 15px
-    }
-
-    section {
-        padding: 150px 0
-    }
-
-    #servico {
-        margin-top: -100px
-    }
-
-    .servicos {
-        flex-direction: column;
+    .contato{
+        margin-top: -120px;
         text-align: center;
-        margin-top: 50px
+        justify-items: center;
+    }
+    .contato h4{
+        text-align: center;
+        margin-left: 300px;
     }
 
-    .caixa {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-        border-radius: 10px;
-        margin: 80px auto
+    .contato img{
+        margin-left: 400px;
     }
 
-    h3 {
-        font-size: 20px;
-        margin-top: -50px
+    .linksite{
+        margin-left: 250px;
+    }
+    
+    .rodape{
+        width: 300%;
+        overflow: hidden;
     }
 
-    .caixa h3 {
-        margin-top: -75px
-    }
 
-    .pcanimado,
-    .lojavirtual {
-        margin: 0;
-        margin-top: 20px
-    }
+    
 
-    .app {
-        margin-right: -45px;
-        margin-top: -20px
-    }
 
-    h4 {
-        font-size: 20px;
-        width: 80%;
-        margin: 10px auto
-    }
-
-    .contato {
-        font-size: 20px;
-        margin-top: -10px
-    }
-
-    .fig {
-        max-width: 50px;
-        height: auto;
-        margin-top: 0
-    }
-
-    .whathsapp_button {
-        font-size: 15px;
-        padding: 5px 10px;
-        border-radius: 5px
-    }
-
-    footer {
-        margin-top: 10px
-    }
-
-    .rodap {
-        font-size: 8px
-    }
+    /* Adicione mais estilos para telas maiores aqui */
 }
